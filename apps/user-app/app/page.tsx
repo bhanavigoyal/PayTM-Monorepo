@@ -1,10 +1,9 @@
-import { PrismaClient } from "@repo/db/client";
-const client = new PrismaClient();
+"use client"
+import {useBalance } from "@repo/store/useBalance"
 
 export default function Page(): JSX.Element {
-  return (
-    <div className="text-2xl">
-      helloo
+    const balance = useBalance();
+    return <div>
+        hi there{balance}
     </div>
-  );
 }
